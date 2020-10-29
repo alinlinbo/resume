@@ -32,9 +32,11 @@
                 <font-awesome-icon icon="th-large"/>&nbsp;个人项目
             </div>
             <div class="projectName">博客后台管理系统</div>
-            <div>用layui开发的一个博客后台管理系统，实现了文章管理，用户管理，评论管理等模块前端页面的编写与接口的对接</div>
+            <div>使用Layui开发的博客后台管理系统，实现了文章管理，用户管理，评论管理等模块前端页面的编写与接口的对接，在项目中对ajax请求进行封装，为接口调用添加了拦截器和loading动画，有效减少代码量并提高开发效率</div>
             <div class="projectName">蘑菇街项目</div>
-            <div>使用vue框架的一个项目，实现了首页，详情页数据的展示，以及商品添加购物车功能</div>
+            <div>使用vue开发的移动端商城项目，实现了首页，详情页数据的展示，
+                以及商品添加购物车功能，针对业务场景封装了滚动容器、
+                底部及顶部导航栏、轮播图等公用组件，提高代码复用</div>
             <div class="title">
                 <font-awesome-icon icon="briefcase"/>&nbsp;工作经历
             </div>
@@ -66,7 +68,7 @@
             <div class="projectName">nuxt</div>
             <div>一个基于 Vue.js , 主要关注应用的 UI 渲染的通用应用框架</div>
             <br>
-            <div>其他：HTML、JS、CSS、Git、Vue、jq....</div>
+            <div>其他：HTML、JS、CSS、Git、Vue、jq、PhotoShop....</div>
         </div>
     </div>
 </template>

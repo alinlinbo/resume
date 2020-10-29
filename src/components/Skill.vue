@@ -4,7 +4,7 @@
         <div class="skills">
             <div class="word">nuxt：一个基于 Vue.js , 主要关注应用的 UI 渲染的通用应用框架</div>
             <div class="word">layui：一个基于jq的前端 UI 框架</div>
-            <div class="word">其他：HTML、JS、CSS、Git、Vue、jq....</div>
+            <div class="word">其他：HTML、JS、CSS、Git、Vue、jq、PhotoShop....</div>
         </div>
     </div>
 </template>
