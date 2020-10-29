@@ -1,15 +1,10 @@
 <template>
     <div class="root">
         <h1>技能</h1>
-        <!--<div class="skills" v-for="(s,index) in skills" :key="index">
-            <div class="word" v-for="(item,index) in s" :key="index">
-                {{item}}
-            </div>
-        </div>-->
         <div class="skills">
-            <div>nuxt：一个基于 Vue.js , 主要关注应用的 UI 渲染的通用应用框架</div>
-            <div>layui：一个基于jq的前端 UI 框架</div>
-            <div>其他：HTML、JS、CSS、Git、Vue、jq....</div>
+            <div class="word">nuxt：一个基于 Vue.js , 主要关注应用的 UI 渲染的通用应用框架</div>
+            <div class="word">layui：一个基于jq的前端 UI 框架</div>
+            <div class="word">其他：HTML、JS、CSS、Git、Vue、jq....</div>
         </div>
     </div>
 </template>
@@ -39,21 +34,17 @@
         flex-direction column
         justify-content center
         align-items center
-
-/*    .skills
+    .skills{
+        color white
         display flex
+        flex-direction column
         flex-wrap wrap
         justify-content center
         padding 0 1rem
         margin-top 10px
-        .word
-            background-color #00796b
-            color #f3f3f3
-            border-radius 5px
-            padding 5px 10px
-            margin 5px*/
-    .skills{
-        color white
     }
+    .word
+        padding 5px 10px
+        margin 5px
 
 </style>

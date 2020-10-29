@@ -15,18 +15,6 @@
         <div class="backBtn" @click="$router.replace('/')" :style="'transform: translateY('+position+'px)'">
             <font-awesome-icon icon="home"/>
         </div>
-
-
-        <!--  <div class="left">
-
-              <h3 style="margin-left: 10px">
-                  <font-awesome-icon icon="book"/>
-                  &nbsp;技能关键词
-              </h3>
-              <div class="skillKeyWord">
-                  <div class="word" v-for="(item,index) in skills" :key="index">{{item}}</div>
-              </div>
-          </div>-->
         <div class="right">
             <div class="name">陈燕灵</div>
             <div class="aboutMe">
@@ -79,11 +67,6 @@
             <div>一个基于 Vue.js , 主要关注应用的 UI 渲染的通用应用框架</div>
             <br>
             <div>其他：HTML、JS、CSS、Git、Vue、jq....</div>
-            <!--<div class="workContent">
-                <strong>主要业绩： </strong>1. 为产品开发了即时聊天系统(web端和小程序端)，仿微信界面，可发送图片、语音和位置，具有聊天记录本地缓存和线上同步等功能。
-                <br>2. 利用反射和注解实现了前端增删改查html代码自动生成，减少此类重复繁琐的开发工作，让团队更专注于其他特殊需求。
-                <br>3. 基于POI和JAVA反射技术实现了excel表格导出自动化工具，市场部人员无需了解sql知识即可根据自己需求导出表格数据，极大减少繁杂多样的sql查询需求工作。
-            </div>-->
         </div>
     </div>
 </template>
@@ -119,41 +102,14 @@
         data() {
             return {
                 position: 0,
-                skills: [
-                    'HTML',
-                    'CSS',
-                    'JavaScript',
-                    'Vue',
-                    'LayUI',
-                    'jQuery',
-                    'Webpack',
-                    'Stylus',
-                    'PWA',
-                    '微信公众号',
-                    '小程序',
-                    'Java',
-                    'Spring',
-                    'Mybatis',
-                    'Hibernate',
-                    'MySql',
-                    'Redis',
-                    'C#',
-                    'UWP',
-                    'Git',
-                    'android',
-                    'PhotoShop',
-                    'WebStorm',
-                    'IDEA',
-                    'Visual Studio'
-                ],
                 personalInfo: [
                     {
                         val: '1996-02',
                         icon: 'calendar-alt'
-                    }, /*{
-                        val: '2年工作经验',
+                    }, {
+                        val: '1年开发经验',
                         icon: 'briefcase'
-                    }, */{
+                    }, {
                         val: '15919213326',
                         icon: 'phone'
                     }, {
