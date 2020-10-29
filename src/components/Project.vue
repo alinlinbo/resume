@@ -20,14 +20,12 @@
                 projects: [
                     {
                         title: '博客后台管理系统',
-                        //url: 'https://www.microsoft.com/zh-cn/p/每日一文-uwp/9nblggh51w0r',
                         icon: '',
-                        content: '用layui开发的一个博客后台管理系统，实现了文章管理，用户管理，评论管理等模块前端页面的编写与接口的对接'
+                        content: '使用Layui开发的博客后台管理系统，实现了文章管理，用户管理，评论管理等模块前端页面的编写与接口的对接'
                     }, {
                         title: '蘑菇街项目',
-                        //url: 'https://www.microsoft.com/zh-cn/p/码农日历/9nblggh526sj',
                         icon: '',
-                        content: '使用vue框架的一个项目，实现了首页，详情页数据的展示，以及商品添加购物车功能'
+                        content: '使用vue开发的移动端商城项目，实现了首页，详情页数据的展示，以及商品添加购物车功能'
                     }
 
                 ]
