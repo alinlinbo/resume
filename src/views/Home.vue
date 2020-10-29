@@ -55,7 +55,7 @@
                 that.$refs.swipe.swipeTo(that.currentIndex)
                 setTimeout(()=>{
                     that.lock = false
-                },2000)
+                },1000)
             };
         },
         watch:{

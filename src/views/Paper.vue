@@ -61,12 +61,16 @@
                 <br>2. 通过一些线上渠道拓展公司业务
             </div>
             <div class="title">
-                <font-awesome-icon icon="th-large"/>&nbsp;专业技能
+                <font-awesome-icon icon="book"/>&nbsp;专业技能
             </div>
             <div class="projectName">layui</div>
-            <div>一个基于jq的前端 UI 框架</div>
+            <div>基于jq的前端 UI 框架</div>
             <div class="projectName">nuxt</div>
-            <div>一个基于 Vue.js , 主要关注应用的 UI 渲染的通用应用框架</div>
+            <div>基于Vue.js 的轻量级应用框架，可创建服务端渲染(SSR)应用，也可建立静态站点应用</div>
+            <div class="projectName">Antd组件库</div>
+            <div>Antd组件库：蚂蚁集团推出的基于ant design设计语言的组件库</div>
+            <div class="projectName">Stylus</div>
+            <div>富有表现力的、动态的、健壮的CSS预处理器</div>
             <br>
             <div>其他：HTML、JS、CSS、Git、Vue、jq、PhotoShop....</div>
         </div>
@@ -107,6 +111,7 @@
                 personalInfo: [
                     {
                         val: '求职意向：前端开发',
+                        icon: 'user'
                     },
                     {
                         val: '1996-02',
