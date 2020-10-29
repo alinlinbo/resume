@@ -46,5 +46,6 @@
     .word
         padding 5px 10px
         margin 5px
+        line-height 1.5rem
 
 </style>
