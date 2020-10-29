@@ -106,6 +106,9 @@
                 position: 0,
                 personalInfo: [
                     {
+                        val: '求职意向：前端开发',
+                    },
+                    {
                         val: '1996-02',
                         icon: 'calendar-alt'
                     }, {

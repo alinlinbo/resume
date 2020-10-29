@@ -55,7 +55,7 @@
             .content
                 text-align center
                 margin 1rem 3.5rem
-                font-size 1.5rem
+                font-size 1.2rem
                 color #f5f5f5
 
     .projectTitle
