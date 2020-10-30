@@ -116,6 +116,7 @@ export default {
       personalInfo: [
         {
           val: '求职意向：前端开发',
+          icon: 'user'
         },
         {
           val: '1996-02',
