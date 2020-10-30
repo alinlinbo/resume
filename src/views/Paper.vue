@@ -8,8 +8,10 @@
         </div>
       </div>
     </div>
-    <div class="backBtn notPrint" @click="$router.replace('/')" :style="'transform: translateY('+position+'px)'">
-      <font-awesome-icon icon="home"/>
+    <div class="notPrint">
+      <div class="backBtn" @click="$router.replace('/')" :style="'transform: translateY('+position+'px)'">
+        <font-awesome-icon icon="home"/>
+      </div>
     </div>
     <div class="right">
       <div class="name">陈燕灵</div>
@@ -70,299 +72,281 @@
           <li>熟练<span>Git</span>、<span>WebStorm</span>、<span>Photoshop</span>等开发工具</li>
         </ul>
       </div>
-      <div v-if="code" class="qrCode">
-        <div class="qrCodeImg">
-          <img src="../assets/qrCode.png">
-        </div>
-      </div>
-      <div v-if="code" class="qrCode">
+      <div class="qrCode">
+        <img src="../assets/qrCode.png">
         <div>扫码查看线上简历</div>
       </div>
     </div>
   </div>
 </template>
 <script>
-export default {
-  components: {},
-  methods: {
-    downloadResume() {
-      window.open('http://pn5jqyvqw.bkt.clouddn.com/%E9%99%88%E6%A0%A1%E5%9F%B9-%E7%AE%80%E5%8E%86.pdf')
-    }
-  },
-  mounted() {
-    let that = this
-    document.body.onmousewheel = function (event) {
-      let e = event || window.event;
-      if (e.wheelDelta) {
-        if (e.wheelDelta > 0) {
-          that.position = 0
-        }
-        if (e.wheelDelta < 0) {
-          that.position = -60
-        }
-      } else if (e.detail) {
-        if (e.detail > 0) {
-          that.position = 0
-        }
-        if (e.detail < 0) {
-          that.position = -60
-        }
+  export default {
+    components: {},
+    methods: {
+      downloadResume() {
+        window.open('http://pn5jqyvqw.bkt.clouddn.com/%E9%99%88%E6%A0%A1%E5%9F%B9-%E7%AE%80%E5%8E%86.pdf')
       }
-    };
-    (function() {
-      const beforePrint = function() {
-        that.code = true
-        console.log('Functionality to run before printing.');
-      };
-      const afterPrint = function() {
-        that.code = false
-        console.log('Functionality to run after printing');
-      };
-      window.onbeforeprint = beforePrint;
-      window.onafterprint = afterPrint;
-    }())
-  },
-  data() {
-    return {
-      code:false,
-      position: 0,
-      personalInfo: [
-        {
-          val: '求职意向：前端开发',
-          icon: 'user'
-        },
-        {
-          val: '1996-02',
-          icon: 'calendar-alt'
-        }, {
-          val: '1年开发经验',
-          icon: 'briefcase'
-        }, {
-          val: '15919213326',
-          icon: 'phone'
-        }, {
-          val: '1144381579@qq.com',
-          icon: 'envelope'
-        }, {
-          val: 'github.com/alinlinbo',
-          icon: 'code'
+    },
+    mounted() {
+      let that = this
+      document.body.onmousewheel = function (event) {
+        let e = event || window.event;
+        if (e.wheelDelta) {
+          if (e.wheelDelta > 0) {
+            that.position = 0
+          }
+          if (e.wheelDelta < 0) {
+            that.position = -60
+          }
+        } else if (e.detail) {
+          if (e.detail > 0) {
+            that.position = 0
+          }
+          if (e.detail < 0) {
+            that.position = -60
+          }
         }
-      ]
+      };
+    },
+    data() {
+      return {
+        position: 0,
+        personalInfo: [
+          {
+            val: '求职意向：前端开发',
+            icon: 'user'
+          },
+          {
+            val: '1996-02',
+            icon: 'calendar-alt'
+          }, {
+            val: '1年开发经验',
+            icon: 'briefcase'
+          }, {
+            val: '15919213326',
+            icon: 'phone'
+          }, {
+            val: '1144381579@qq.com',
+            icon: 'envelope'
+          }, {
+            val: 'github.com/alinlinbo',
+            icon: 'code'
+          }
+        ]
+      }
     }
   }
-}
 </script>
 
 <style lang="stylus" scoped>
-@media print
-  .mobilePanel
-    display none
-  .verticalMenu
-    display none
-  .notPrint
-    display none
-@media only screen and (max-width: 768px)
-  .container
+  @media print
+    .notPrint
+      display none
+    .container
+      .qrCode
+        display flex
+
+  @media only screen and (max-width: 768px)
+    .container
+      flex-direction column
+      width 100%
+
+    .right
+      width 100%
+
+    .left
+      width 100%
+
+    .notPrint
+      display none
+
+  @media screen and (min-width: 769px)
+
+    .container
+      flex-direction row
+      width: 21cm
+      height: 297mm
+      margin: 10px auto
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+      overflow: hidden
+      border-radius: 4px
+
+    .left
+      width 240px
+      padding 6px
+      box-sizing border-box
+
+  .skills
+    ul
+      margin-left 1rem
+      margin-top 0.5rem
+      li
+        list-style disc
+    span
+      background #29B6F6
+      border-radius 4px
+
+  .backBtn
+    position fixed
+    transition: transform 300ms
+    top 5px
+    left @top
+    width 36px
+    height @width
+    background-color #7C4DFF
+    opacity 0.5
+    cursor pointer
+    display flex
+    align-items center
+    justify-content center
+    border-radius 50%
+
+    svg
+      color white
+
+  .floatBtns
+    position fixed
+    display flex
     flex-direction column
-    width 100%
+    bottom 48px
+    right 48px
+    color white
+    width 120px
+    text-align center
+    align-items center
+
+    .printBtn
+      background-color #FF4081
+
+    .downloadBtn
+      background-color #7C4DFF
+
+    .floatButton
+      cursor pointer
+      margin-top 16px
+      transition: all 300ms
+      width 64px
+      height @width
+      border-radius @width
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 5px 7px -2px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.12)
+
+      .text
+        font-size 18px
+        display none
+        margin-top 18px
+        white-space nowrap
+
+      svg
+        font-size 32px
+        margin-top 16px
+
+    .floatButton:hover
+      width 120px
+      opacity .8
+
+      .text
+        display block
+
+      svg
+        display none
+
+
+  .qrCode
+    display none
+    position fixed
+    right 1rem
+    bottom 0
+    flex-direction column
+    align-items center
+
+    img
+      width 5rem
+      height auto
+
+  .workTitle
+    display flex
+    justify-content space-between
+
+  .workContent
+    margin-top 5px
+    font-size 14px
+
+  .name
+    font-size 32px
+    margin-top 15px
+
+  .projectName
+    font-size 18px
+    font-weight bold
+    margin 8px 0
 
   .right
-    width 100%
+    flex: 1
+    padding: 0 20px
+    box-sizing border-box
+    display flex
+    flex-direction column
+    align-items stretch
 
-  .left
-    width 100%
+  .title
+    color: #29B6F6
+    font-size: 22px
+    border-bottom: #29B6F6 1px solid
+    margin-top 24px
+    margin-bottom 5px
 
-  .notPrint
-    display none
+  .skillKeyWord
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-evenly
+    padding 5px 0
 
-@media screen and (min-width: 769px)
+  .word
+    margin: 4px
+    padding: 6px
+    border-radius: 16px
+    border: white 1px solid
+    font-size: 16px
+
 
   .container
-    flex-direction row
-    width: 21cm
-    height: 297mm
-    margin: 10px auto
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
-    overflow: hidden
-    border-radius: 4px
+    display: flex
+
 
   .left
-    width 240px
-    padding 6px
-    box-sizing border-box
-
-.skills
-  ul
-    margin-left 1rem
-    margin-top 0.5rem
-    li
-      list-style disc
-  span
-    background #29B6F6
-    border-radius 4px
-
-.backBtn
-  position fixed
-  transition: transform 300ms
-  top 5px
-  left @top
-  width 36px
-  height @width
-  background-color #7C4DFF
-  opacity 0.5
-  cursor pointer
-  display flex
-  align-items center
-  justify-content center
-  border-radius 50%
-
-  svg
-    color white
-
-.floatBtns
-  position fixed
-  display flex
-  flex-direction column
-  bottom 48px
-  right 48px
-  color white
-  width 120px
-  text-align center
-  align-items center
-
-  .printBtn
-    background-color #FF4081
-
-  .downloadBtn
-    background-color #7C4DFF
-
-  .floatButton
-    cursor pointer
-    margin-top 16px
-    transition: all 300ms
-    width 64px
-    height @width
-    border-radius @width
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.14), 0 5px 7px -2px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.12)
-
-    .text
-      font-size 18px
-      display none
-      margin-top 18px
-      white-space nowrap
-
-    svg
-      font-size 32px
-      margin-top 16px
-
-  .floatButton:hover
-    width 120px
-    opacity .8
-
-    .text
-      display block
-
-    svg
-      display none
+    background-color: #29B6F6
+    display: flex
+    flex-direction: column
+    color: white
 
 
-.qrCode
-  display flex
-  flex-direction row-reverse
+  .avatar
+    margin: 0px auto
+    margin-right: 22px
+    width: 120px
+    height: 120px
+    border: 1px solid whitesmoke
+    background-color: white
 
-.qrCodeImg
-  display flex
-  width 130px
-
-  img
-    margin 0 auto
-    width 50%
-    height auto
-
-.workTitle
-  display flex
-  justify-content space-between
-
-.workContent
-  margin-top 5px
-  font-size 14px
-
-.name
-  font-size 32px
-  margin-top 15px
-
-.projectName
-  font-size 18px
-  font-weight bold
-  margin 8px 0
-
-.right
-  flex: 1
-  padding: 0 20px
-  box-sizing border-box
-  display flex
-  flex-direction column
-  align-items stretch
-
-.title
-  color: #29B6F6
-  font-size: 22px
-  border-bottom: #29B6F6 1px solid
-  margin-top 24px
-  margin-bottom 5px
-
-.skillKeyWord
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-evenly
-  padding 5px 0
-
-.word
-  margin: 4px
-  padding: 6px
-  border-radius: 16px
-  border: white 1px solid
-  font-size: 16px
+    img
+      width 100%
+      height 100%
 
 
-.container
-  display: flex
+  .personInfo
+    margin-left: 22px
+    font-size: 15px
 
 
-.left
-  background-color: #29B6F6
-  display: flex
-  flex-direction: column
-  color: white
+  .personInfo
+    .row
+      margin-top: 10px
 
+      svg
+        width 20px
+        text-align center
 
-.avatar
-  margin: 0px auto
-  margin-right: 22px
-  width: 120px
-  height: 120px
-  border: 1px solid whitesmoke
-  background-color: white
-
-  img
-    width 100%
-    height 100%
-
-
-.personInfo
-  margin-left: 22px
-  font-size: 15px
-
-
-.personInfo
-  .row
-    margin-top: 3px
-
-    svg
-      width 20px
-      text-align center
-
-.aboutMe
-  display flex
+  .aboutMe
+    display flex
 
 </style>
