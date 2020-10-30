@@ -70,12 +70,12 @@
           <li>熟练<span>Git</span>、<span>WebStorm</span>、<span>Photoshop</span>等开发工具</li>
         </ul>
       </div>
-      <div class="qrCode">
+      <div v-if="code" class="qrCode">
         <div class="qrCodeImg">
           <img src="../assets/qrCode.png">
         </div>
       </div>
-      <div class="qrCode">
+      <div v-if="code" class="qrCode">
         <div>扫码查看线上简历</div>
       </div>
     </div>
@@ -109,9 +109,22 @@ export default {
         }
       }
     };
+    (function() {
+      const beforePrint = function() {
+        that.code = true
+        console.log('Functionality to run before printing.');
+      };
+      const afterPrint = function() {
+        that.code = false
+        console.log('Functionality to run after printing');
+      };
+      window.onbeforeprint = beforePrint;
+      window.onafterprint = afterPrint;
+    }())
   },
   data() {
     return {
+      code:false,
       position: 0,
       personalInfo: [
         {
@@ -263,7 +276,7 @@ export default {
 
   img
     margin 0 auto
-    width 100%
+    width 50%
     height auto
 
 .workTitle
@@ -343,7 +356,7 @@ export default {
 
 .personInfo
   .row
-    margin-top: 10px
+    margin-top: 3px
 
     svg
       width 20px
