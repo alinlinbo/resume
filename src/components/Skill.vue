@@ -1,12 +1,10 @@
 <template>
     <div class="root">
-        <h1>技能</h1>
-        <div class="skills">
-            <div class="word">Nuxt：基于Vue.js 的轻量级应用框架，可创建服务端渲染(SSR)应用，也可建立静态站点应用</div>
-            <div class="word">Layui：基于jq的前端 UI 框架</div>
-            <div class="word">Antd组件库：蚂蚁集团推出的基于ant design设计语言的组件库</div>
-            <div class="word">Stylus：富有表现力的、动态的、健壮的CSS预处理器</div>
-            <div class="word">其他：HTML、JS、CSS、Git、Vue、jQuery、WebStorm等</div>
+        <h1>技能&工具</h1>
+        <div class="skills" v-for="(s,index) in skills" :key="index">
+            <div class="word" v-for="(item,index) in s" :key="index">
+                {{item}}
+            </div>
         </div>
     </div>
 </template>
@@ -16,6 +14,25 @@
         name: "Skill",
         data() {
             return {
+                skills: [
+                    [
+                        'HTML',
+                        'CSS',
+                        'Stylus',
+                        'JavaScript',
+                        'jQuery',
+                        'Webpack',
+                    ], [
+                        'Vue',
+                        'Nuxt',
+                        'Layui',
+                        'Antd',
+                    ], [
+                        'Git',
+                        'PhotoShop',
+                        'WebStorm'
+                    ]
+                ],
             }
         }
     }
@@ -36,18 +53,17 @@
         flex-direction column
         justify-content center
         align-items center
-    .skills{
-        color white
+    .skills
         display flex
-        flex-direction column
         flex-wrap wrap
         justify-content center
         padding 0 1rem
         margin-top 10px
-    }
-    .word
-        padding 5px 10px
-        margin 5px
-        line-height 1.5rem
+        .word
+            background-color #00796b
+            color #f3f3f3
+            border-radius 5px
+            padding 5px 10px
+            margin 5px
 
 </style>
