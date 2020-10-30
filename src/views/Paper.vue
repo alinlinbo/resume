@@ -1,9 +1,5 @@
 <template>
   <div class="container">
-    <div class="qrCode">
-      <img src="../assets/qrCode.png">
-      <div>扫码查看线上简历</div>
-    </div>
     <div class="notPrint">
       <div class="floatBtns ">
         <div class="downloadBtn floatButton" @click="downloadResume">
@@ -73,6 +69,14 @@
           <li>熟练使用<span>Vue、jq</span>等框架进行项目开发，熟悉<span>Nuxt.js</span>框架（基于Vue的支持SSR后端渲染的轻量级框架）、<span>LayUI</span>框架（基于jq的UI框架）、<span>ant design</span>组件库</li>
           <li>熟练<span>Git</span>、<span>WebStorm</span>、<span>Photoshop</span>等开发工具</li>
         </ul>
+      </div>
+      <div class="qrCode">
+        <div class="qrCodeImg">
+          <img src="../assets/qrCode.png">
+        </div>
+      </div>
+      <div class="qrCode">
+        <div>扫码查看线上简历</div>
       </div>
     </div>
   </div>
@@ -249,14 +253,12 @@ export default {
 
 
 .qrCode
-  position absolute
-  text-align center
-  color white
-  display none
-  width 200px
-  z-index 999
-  bottom 20px
-  left 20px
+  display flex
+  flex-direction row-reverse
+
+.qrCodeImg
+  display flex
+  width 130px
 
   img
     margin 0 auto
