@@ -2,7 +2,7 @@
     <div class="root">
         <font-awesome-icon v-for="i in 3" :key="i"  icon="chevron-right"/>&nbsp;
         <router-link to="/paper">纸质版简历</router-link>
-        &nbsp;<font-awesome-icon  v-for="i in 3" :key="i" icon="chevron-left"/>
+        &nbsp;<font-awesome-icon  v-for="i in [4,5,6]" :key="i" icon="chevron-left"/>
     </div>
 </template>
 

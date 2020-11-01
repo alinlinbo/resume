@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="avatar">
-          <img src="../assets/head.jpg">
+          <img src="../assets/head-paper.jpg">
         </div>
       </div>
       <div class="title">
@@ -84,7 +84,7 @@
     components: {},
     methods: {
       downloadResume() {
-        window.open('http://pn5jqyvqw.bkt.clouddn.com/%E9%99%88%E6%A0%A1%E5%9F%B9-%E7%AE%80%E5%8E%86.pdf')
+        window.open('https://resource-alinlinbo.obs.cn-south-1.myhuaweicloud.com/%E9%99%88%E7%87%95%E7%81%B5-%E5%89%8D%E7%AB%AF%E6%B1%82%E8%81%8C-%E7%AE%80%E5%8E%86.pdf')
       }
     },
     mounted() {
@@ -117,7 +117,7 @@
             icon: 'user'
           },
           {
-            val: '1996-02',
+            val: '专业：软件技术',
             icon: 'calendar-alt'
           }, {
             val: '1年开发经验',
@@ -324,7 +324,6 @@
     margin: 0px auto
     margin-right: 22px
     width: 120px
-    height: 120px
     border: 1px solid whitesmoke
     background-color: white
 

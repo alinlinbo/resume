@@ -1,6 +1,6 @@
 <template>
     <div class="root">
-        <img id="avatar" src="../assets/head.jpg"/>
+            <img id="avatar" src="../assets/head.jpg"/>
         <h1>陈燕灵</h1>
         <div class="subTitle">定个小目标，我想做个页面仔</div>
     </div>
@@ -30,4 +30,5 @@
         font-size 1.4rem
         padding 0 2rem
         text-align center
+
 </style>

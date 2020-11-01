@@ -37,6 +37,11 @@
 </script>
 
 <style scoped lang="stylus">
+    @media screen and (min-width: 769px)
+        .content
+            width 60%
+            font-size 1.5rem
+
     .root
         display flex
         flex-direction column
