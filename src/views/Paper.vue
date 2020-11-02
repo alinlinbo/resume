@@ -139,6 +139,16 @@
 </script>
 
 <style lang="stylus" scoped>
+  .personInfo
+    font-size: 15px
+  .avatar
+    margin: 0px auto
+    margin-right: 22px
+    width: 120px
+    background-color: white
+    img
+      width 100%
+
   @media print
     .notPrint
       display none
@@ -159,21 +169,8 @@
 
     .notPrint
       display none
-  @media only screen and (min-width: 361px)
-    .avatar
-      margin: 0px auto
-      margin-right: 22px
-      width: 120px
-      border: 1px solid whitesmoke
-      background-color: white
 
-    img
-      width 100%
-      height 100%
-
-    .personInfo
-      font-size: 15px
-  @media only screen and (max-width: 360px)
+  @media  screen and (max-width: 360px)
     .avatar
       margin: 0px auto
       margin-right: 0px
@@ -210,7 +207,6 @@
     span
       background #29B6F6
       border-radius 4px
-
   .backBtn
     position fixed
     transition: transform 300ms
@@ -277,12 +273,20 @@
 
 
   .qrCode
+    font-size 0.8rem
+    width 10rem
     display none
     position fixed
     right 1rem
     bottom 0
     flex-direction column
     align-items center
+
+    img
+      margin 0 auto
+      width 50%
+      height auto
+
 
 
 
