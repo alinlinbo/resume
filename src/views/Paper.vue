@@ -37,28 +37,37 @@
         以及商品添加购物车功能，针对业务场景封装了滚动容器、
         底部及顶部导航栏、轮播图等公用组件，提高代码复用
       </div>
+      <div class="projectName">个人线上简历</div>
+      <div>使用vue开发的个人线上简历，利用媒体查询和Rem特性同时适配了PC端和移动端，且实现了用户调用浏览器打印页面时自动隐藏交互按钮并显示网站二维码的功能
+      </div>
       <div class="title">
         <font-awesome-icon icon="briefcase"/>&nbsp;工作经历
       </div>
-      <div class="projectName">中国人寿珠海分公司</div>
-      <div class="workTitle">
-        <strong>工作内容</strong>
-        <div class="workTime">2019-08~2020-06</div>
-      </div>
-      <div class="workContent">
-        1. 使用vb脚本处理excel表格
-        <br>
-        2. ps制图以及一些基本的数据录入
-      </div>
+      <div class="word">
+        <div>
+          <div class="projectName">中国人寿珠海分公司</div>
+          <div class="workTitle">
+            <strong>资料录入员</strong>
+            <div class="workTime">2019-08~2020-06</div>
+          </div>
+          <div class="workContent">
+            1. 使用vb脚本处理excel表格
+            <br>
+            2. ps制图以及一些基本的数据录入
+          </div>
+        </div>
 
-      <div class="projectName">珠海客官点评科技有限公司</div>
-      <div class="workTitle">
-        <strong>工作内容</strong>
-        <div class="workTime">2018-03~2019-01</div>
-      </div>
-      <div class="workContent">
-        1. 使用PS和AI制作海报和插图以及一些图标。
-        <br>2. 通过一些线上渠道拓展公司业务
+        <div>
+          <div class="projectName">珠海客官点评科技有限公司</div>
+          <div class="workTitle">
+            <strong>网络客服</strong>
+            <div class="workTime">2018-03~2019-01</div>
+          </div>
+          <div class="workContent">
+            1. 使用PS和AI制作海报和插图以及一些图标。
+            <br>2. 通过一些线上渠道拓展公司业务
+          </div>
+        </div>
       </div>
       <div class="title">
         <font-awesome-icon icon="th-large"/>&nbsp;技能&自我评价
@@ -150,6 +159,21 @@
       width 100%
 
   @media print
+    .workTitle
+      display flex
+      justify-content flex-end
+
+      .workTime
+        margin-top 0.3rem
+        margin-left 0rem
+
+    .word
+      display flex
+      flex-direction row
+      flex-grow 2
+      justify-content space-between
+
+
     .notPrint
       display none
     .container
@@ -183,6 +207,18 @@
     .personInfo
       font-size: 10px
   @media screen and (min-width: 769px)
+    .workTitle
+      display flex
+      justify-content end
+      .workTime
+        margin-top 0.3rem
+        margin-left 0rem
+
+    .word
+      display flex
+      flex-direction row
+      flex-grow 2
+      justify-content space-between
 
     .container
       flex-direction row
@@ -286,9 +322,6 @@
       margin 0 auto
       width 50%
       height auto
-
-
-
 
   .workTitle
     display flex
