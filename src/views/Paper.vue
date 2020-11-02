@@ -159,7 +159,32 @@
 
     .notPrint
       display none
+  @media only screen and (min-width: 361px)
+    .avatar
+      margin: 0px auto
+      margin-right: 22px
+      width: 120px
+      border: 1px solid whitesmoke
+      background-color: white
 
+    img
+      width 100%
+      height 100%
+
+    .personInfo
+      font-size: 15px
+  @media only screen and (max-width: 360px)
+    .avatar
+      margin: 0px auto
+      margin-right: 0px
+      width: 80px
+      background-color: white
+
+    img
+      width 100%
+
+    .personInfo
+      font-size: 10px
   @media screen and (min-width: 769px)
 
     .container
@@ -259,9 +284,7 @@
     flex-direction column
     align-items center
 
-    img
-      width 5rem
-      height auto
+
 
   .workTitle
     display flex
@@ -318,24 +341,6 @@
     display: flex
     flex-direction: column
     color: white
-
-
-  .avatar
-    margin: 0px auto
-    margin-right: 22px
-    width: 120px
-    border: 1px solid whitesmoke
-    background-color: white
-
-    img
-      width 100%
-      height 100%
-
-
-  .personInfo
-    margin-left: 22px
-    font-size: 15px
-
 
   .personInfo
     .row
