@@ -195,6 +195,8 @@
   .workTitle
     display flex
     flex-wrap wrap
+    strong
+      margin-right: 1rem;
     .workTime
       margin-top 0.3rem
 
