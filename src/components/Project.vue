@@ -19,19 +19,20 @@
             return {
                 projects: [
                     {
+                        title: '个人线上简历',
+                        url: 'https://github.com/alinlinbo/resume',
+                        icon: '',
+                        content: '使用vue开发的个人线上简历，利用媒体查询和Rem特性同时适配了PC端和移动端，且实现了用户调用浏览器打印页面时自动隐藏交互按钮并显示网站二维码的功能'
+                    },
+                    {
                         title: '博客后台管理系统',
                         url: 'https://github.com/alinlinbo/blog-admin-web',
                         icon: '',
                         content: '使用Layui开发的博客后台管理系统，实现了文章管理，用户管理，' +
                             '评论管理等模块前端页面的编写与接口的对接，在项目中对ajax请求进行封装，' +
                             '为接口调用添加了拦截器和loading动画，有效减少代码量并提高开发效率'
-                    },
-                    {
-                        title: '个人线上简历',
-                        url: 'https://github.com/alinlinbo/resume',
-                        icon: '',
-                        content: '使用vue开发的个人线上简历，利用媒体查询和Rem特性同时适配了PC端和移动端，且实现了用户调用浏览器打印页面时自动隐藏交互按钮并显示网站二维码的功能'
-                    },{
+                    }
+                    ,{
                         title: '蘑菇街项目',
                         url: 'https://github.com/alinlinbo/supermall',
                         icon: '',
