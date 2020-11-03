@@ -43,7 +43,7 @@
       <div class="title">
         <font-awesome-icon icon="briefcase"/>&nbsp;工作经历
       </div>
-      <div class="word">
+      <div class="work">
         <div>
           <div class="projectName">中国人寿珠海分公司</div>
           <div class="workTitle">
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <div>
+        <div class="workItem">
           <div class="projectName">珠海客官点评科技有限公司</div>
           <div class="workTitle">
             <strong>网络客服</strong>
@@ -149,7 +149,7 @@
 
 <style lang="stylus" scoped>
   .personInfo
-    font-size: 15px
+    font-size: 1rem
   .avatar
     margin: 0px auto
     margin-right: 22px
@@ -159,21 +159,6 @@
       width 100%
 
   @media print
-    .workTitle
-      display flex
-      justify-content flex-end
-
-      .workTime
-        margin-top 0.3rem
-        margin-left 0rem
-
-    .word
-      display flex
-      flex-direction row
-      flex-grow 2
-      justify-content space-between
-
-
     .notPrint
       display none
     .container
@@ -205,20 +190,22 @@
       width 100%
 
     .personInfo
-      font-size: 10px
-  @media screen and (min-width: 769px)
-    .workTitle
-      display flex
-      justify-content end
-      .workTime
-        margin-top 0.3rem
-        margin-left 0rem
+      font-size: 1rem
 
-    .word
-      display flex
-      flex-direction row
-      flex-grow 2
-      justify-content space-between
+  .workTitle
+    display flex
+    flex-wrap wrap
+    .workTime
+      margin-top 0.3rem
+
+  .work
+    display flex
+    flex-wrap wrap
+
+    div
+      min-width 280px
+      flex 1
+  @media screen and (min-width: 768px)
 
     .container
       flex-direction row
@@ -360,14 +347,6 @@
     flex-wrap: wrap
     justify-content: space-evenly
     padding 5px 0
-
-  .word
-    margin: 4px
-    padding: 6px
-    border-radius: 16px
-    border: white 1px solid
-    font-size: 16px
-
 
   .container
     display: flex
