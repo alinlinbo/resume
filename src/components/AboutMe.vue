@@ -2,7 +2,7 @@
     <div class="root">
             <img id="avatar" src="../assets/head.jpg"/>
         <h1>陈燕灵</h1>
-        <div class="subTitle">定个小目标，我想做个页面仔</div>
+        <div class="subTitle">前端开发</div>
     </div>
 </template>
 

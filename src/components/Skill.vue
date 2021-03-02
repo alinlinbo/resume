@@ -24,8 +24,8 @@
                         'Webpack',
                     ], [
                         'Vue',
-                        'Nuxt',
-                        'Layui',
+                        'guns',
+                        'Avue',
                         'Antd',
                     ], [
                         'Git',
